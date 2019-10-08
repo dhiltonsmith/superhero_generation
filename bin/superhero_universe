@@ -1,0 +1,11 @@
+#!/usr/local/bin/python
+
+import sys
+sys.path[0:0] = [
+    'src'
+]
+
+import SuperheroUniverse.StartUniverse
+
+if __name__ == '__main__':
+    SuperheroUniverse.StartUniverse.main()
