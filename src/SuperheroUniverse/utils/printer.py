@@ -26,6 +26,18 @@ class SingletonPrinter():
                 self.invalid_choice()
                 return self.print_menu(header, options)
 
+        def print_integer_question(self, question, minimum):
+            input = raw_input(question)
+            try:
+                if int(input) >= minimum:
+                    return int(input)
+                else:
+                    self.invalid_choice()
+                    self.print_integer_question(question, minimum)
+            except ValueError:
+                self.invalid_choice()
+                self.print_integer_question(question, minimum)
+
         def print_string_question(self, question):
             return raw_input(question)
 
